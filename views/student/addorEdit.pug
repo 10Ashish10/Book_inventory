@@ -1,0 +1,88 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/student" method="POST" autocomplete="off">
+
+    <input type="hidden" name="_id" value="{{student._id}}">
+
+    <div class="form-group">
+
+        <label>Book Name</label>
+
+        <input type="text" class="form-control" name="bookName" placeholder="Book Name" value="{{student.bookName}}">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Author</label>
+
+        <input type="text" class="form-control" name="author" placeholder="Author" value="{{student.author}}">
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+
+            <label>Publicer</label>
+
+            <input type="text" class="form-control" name="publicer" placeholder="publicer" value="{{student.publicer}}">
+
+        </div>
+    </div>
+
+<div class="form-row">
+        <div class="form-group col-md-6">
+
+            
+  <label for="dop">Publication Date:</label>
+  <input type="date" class="form-control" id="dop" name="dop" value="{{student.dop}}">
+  
+
+
+           
+
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <label>Price</label>
+
+            <input type="text" class="form-control" name="price" placeholder="price" value="{{student.price}}">
+
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <label for="type">Type:</label>
+<select class="form-control" name="type" value="{{student.type}}" >
+  <option value="fiction">Fiction</option>
+  <option value="detective">Detective</option>
+  <option value="moral">Moral</option>
+  <option value="economics">Economics</option>
+  <option value="Polotics">Polotics</option>
+</select>
+
+           
+
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <button type="submit" class="btn btn-info">Submit</button>
+
+        <a class="btn btn-secondary" href="/student/list">View All</a>
+
+    </div>
+
+</form>
